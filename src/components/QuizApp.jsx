@@ -3,7 +3,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
 import { Progress } from "./ui/progress";
 import { Input } from "./ui/input";
 import { Button } from "./ui/button";
-import { getQuizHistory } from "../utils/IndexDBhelper";
+import { getQuizHistory, saveQuizResult } from "../utils/IndexDBhelper";
 
 const QuizApp = () => {
   const [currentQuestion, setCurrentQuestion] = useState(0);
