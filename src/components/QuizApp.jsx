@@ -48,12 +48,12 @@ const QuizApp = () => {
     },
     {
       question: "What is the value of 12 + 28?",
-      answer: 50,
+      answer: 40,
       type: "int"
     },
     {
       question: "How many states are there in the United States?",
-      answer: 40,
+      answer: 50,
       type: "int"
     },
     {
