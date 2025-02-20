@@ -119,27 +119,11 @@ const QuizApp = () => {
       setTimeLeft(30);
     } else {
       setIsQuizComplete(true);
-      const finalScore = score + (selectedAnswer === quizData[currentQuestion].answer ? 1 : 0);
-      setScore(finalScore);
-      const result = { date: new Date().toLocaleString(), score: finalScore };
+      const result = { date: new Date().toLocaleString(), score: score };
       if (typeof window !== 'undefined') {
         saveQuizResult(result).then(() => getQuizHistory().then(setQuizHistory));
       }
     }
-  };
-
-  const getInputClassName = () => {
-    let baseClass = "w-full p-4 mb-3 text-left rounded-lg transition-all duration-200 ";
-    
-    if (answerStatus === null) {
-      baseClass += "bg-white border border-gray-200";
-    } else if (answerStatus === 'correct') {
-      baseClass += "bg-green-100 border border-green-500 text-green-700";
-    } else {
-      baseClass += "bg-red-100 border border-red-500 text-red-700";
-    }
-    
-    return baseClass;
   };
 
     const getButtonClassName = (index) => {
